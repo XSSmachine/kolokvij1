@@ -102,6 +102,6 @@ jobs:
         run: kubectl apply -f deployment.yaml
 
       - name: Apply Services
-        run: kubectl apply -f services.yaml
+        run: kubectl apply -f service.yaml
 
 
