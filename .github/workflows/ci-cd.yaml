@@ -69,11 +69,11 @@ jobs:
 
       - name: docker build
         id: docker-build
-        run: docker build -t lin.ocir.io/axxhrjrrq6fg/novirepo/mojrepo .
+        run: docker build -t lin.ocir.io/axxhrjrrq6fg/hello-world .
 
       - name: docker push
         id: docker-push
-        run: docker push lin.ocir.io/axxhrjrrq6fg/novirepo/mojrepo:latest
+        run: docker push lin.ocir.io/axxhrjrrq6fg/hello-world:latest
 
   deploy-job:
     needs: build-job
