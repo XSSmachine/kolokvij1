@@ -79,7 +79,7 @@ jobs:
 
       # Push the Docker image
       - name: Push Docker Image to OCIR
-        run: docker push lin.ocir.io/axxhrjrrq6fg/hello-world:latest
+        run: docker push --force lin.ocir.io/axxhrjrrq6fg/hello-world:latest
 
   deploy-job:
     needs: build-job
