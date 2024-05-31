@@ -68,7 +68,7 @@ jobs:
         run: docker --version
 
       - name: Login to OCI Registry
-        run: echo ${{ secrets.OCI_PASSWORD }} | docker login -u ${{ secrets.OCI_USERNAME }} --password-stdin lin.ocir.io
+        run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }} lin.ocir.io
 
       - name: Build Docker Image
         run: docker build -t hello-world .
