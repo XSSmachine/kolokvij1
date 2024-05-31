@@ -92,7 +92,10 @@ jobs:
         with:
           cluster: ${{ secrets.OKE_CLUSTER_OCID }}
 
-      - name: Run Kubectl
-        run: kubectl apply -f sbio-hello-app.yaml
+      - name: Apply Deployment
+        run: kubectl apply -f deployment.yaml
+
+      - name: Apply Services
+        run: kubectl apply -f services.yaml
 
 
