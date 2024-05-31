@@ -67,8 +67,8 @@ jobs:
       - name: Check Docker Version
         run: docker --version
 
-      - name: Login to Docker Hub
-        run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }} lin.ocir.io
+      - name: Login to OCI Registry
+        run: echo ${{ secrets.OCI_PASSWORD }} | docker login -u ${{ secrets.OCI_USERNAME }} --password-stdin lin.ocir.io
 
       - name: Build Docker Image
         run: docker build -t hello-world .
